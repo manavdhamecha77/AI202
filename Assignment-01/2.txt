@@ -1,0 +1,39 @@
+(Assuming Priya = Root Node)
+BFS
+
+Traversal => Priya → Raj → Aarav → Akash → Neha1 → Sunil → Arjun1 → Sneha → Rahul → Neha2 → Maya → Pooja → Arjun2
+
+Tree => 
+Priya
+├── Raj
+│   └── Sunil
+├── Aarav
+│   └── Arjun1
+├── Akash
+│   └── Sneha
+└── Neha1
+    ├── Rahul
+    │   ├── Maya
+    │   │   └── Arjun2
+    │   └── Pooja
+    └── Neha2
+
+
+DFS
+
+Traversal => Priya → Raj → Sunil → Sneha → Rahul → Maya → Arjun2 → (backtrack) → Pooja → (backtrack) → Neha1 → Neha2 → Akash → Aarav → Arjun1
+
+Tree => 
+Priya
+└── Raj
+    └── Sunil
+        └── Sneha
+            └── Rahul
+                ├── Maya
+                │   └── Arjun2
+                └── Pooja
+                    └── Neha1
+                        └── Neha2
+                            └── Akash
+                                └── Aarav
+                                    └── Arjun1
