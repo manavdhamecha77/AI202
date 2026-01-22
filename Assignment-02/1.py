@@ -57,4 +57,4 @@ def bfs(start, goal):
 
     return -1
 
-print(bfs(start, goal))
+print(f"Number of states explored in bfs: {bfs(start, goal)}")

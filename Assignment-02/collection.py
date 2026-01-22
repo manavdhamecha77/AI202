@@ -50,3 +50,9 @@ class stack:
             print("Empty")
             return
         print(self.container)
+
+    def empty(self):
+        if len(self.container) == 0:
+            return True
+        else:
+            return False

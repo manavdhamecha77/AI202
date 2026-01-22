@@ -96,15 +96,18 @@ def bfs(graph, start, target):
 dfs_paths = dfs(graph, 7, 0)
 bfs_paths = bfs(graph, 7, 0)
 
-# countb = 0
-# countd = 0
+countb = 0
+countd = 0
 
 print("DFS Paths:")
 for p in dfs_paths:
-    # countd += 1
+    countd += 1
     print(p)
 
 print("\nBFS Paths:")
 for p in bfs_paths:
-    # countb += 1
+    countb += 1
     print(p)
+
+print(f"Paths in bfs: {countb}")
+print(f"Paths in dfs: {countd}")
