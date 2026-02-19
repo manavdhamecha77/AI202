@@ -1,0 +1,11 @@
+Consider a problem that is stated as follows. Three girls and three boys are on one side of a river, along with a boat that 
+can hold one or two people. Find a way to get everyone to the other side without ever leaving a group of girls in one place 
+outnumbered by the boys in that place. Formulate the problem with appropriate search space and do as per following  
+instructions.
+
+1. Implement and solve the problem optimally using the following search problem.
+a) Depth Limited Search (take limit=3)
+b) Iterative Deepening Search
+
+
+2. Give comparison of both algorithms with the number of explored states and state approximate time complexities.

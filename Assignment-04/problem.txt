@@ -1,0 +1,10 @@
+Q1 Use the city map given in Q1 of assignment 1 and implement the best first search algorithm to reach your destination and 
+compare your results in terms of the number of possible paths explored.
+
+Q2 Consider a building floor plan as given in figure. Design a robot guided evacuation planning using the best first search 
+algorithm. Consider the following constraints:
+
+Allowed movements up, down, left and right
+Walls and rooms block movement
+Evacuation planning covers the route from entry to exit 
+Design an evaluation cost function with proper justification for your algorithm

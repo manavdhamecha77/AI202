@@ -1,0 +1,23 @@
+1. Implement a Simple Reflex Agent for a vacuum cleaner that can navigate a three-room environment (A, B, and C) and maintain 
+cleanliness. Identify the “rationality” of its actions. How will you define the performance cost? Define the complete Rule 
+Table and store it either in a dictionary/vector/matrix based on the language you implement the vacuum cleaner. Show the 
+simulation output with percept, action, and location. Do you need priorities in the rules?
+
+2. Design a Simple Reflex Agent for an Indian Railways Level Crossing. The agent must ensure maximum safety for road traffic 
+while minimizing delays for the train, using multi-source sensory input without historical tracking. The environment consists 
+of a double-track railway line intersecting a busy state highway. 
+
+The percepts include the following:
+● Track Sensors (Inbound/Outbound): Sensors placed 2km away that detect if a train is currently passing over them. It is 
+either 
+detected or not detected.
+● Obstacle Sensors (Yellow Box): A grid of sensors on the road between the gates to detect “stuck” vehicles 
+(e.g., an auto-rickshaw or buffalo).
+● Manual Emergency Input: A physical lever for the station master. It is either Neutral or Active.
+
+Actuators:
+● Gate Arm: Lower/Raise
+● Hooter/Siren: On/Off
+● Signal to Train: Green (Safe to proceed)/Red (Emergency Stop)
+
+Design the rules set. Show the simulation output with percept, action, and location. Do you need priorities in the rules?
