@@ -1,0 +1,8 @@
+The 8 queen’s problem is stated as: Place 8 queens on a chessboard such that no two queens
+attack each other. Considering this problem, complete the following tasks considering a valid
+heuristic function with justification.
+Q1 Generate 50 random initial boards. Run steepest -ascent hill climbing on each and record
+initial heuristic value, final heuristic value, number of steps taken and status solved or fail. Prove
+the presence of a local minimum.
+Q2 Repeat the above experiment on first choice, random restart and simulated annealing
+variants of hill climbing and compare your results.

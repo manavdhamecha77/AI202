@@ -1,0 +1,31 @@
+Q1 Use the city map given in Q1 of assignment 1 and implement the greedy best first search
+and A* algorithm to reach Boston city from Chicago and compare your results in terms of the
+number of cities explored before reaching your destination. Consider the heuristic values as
+given below,
+
+--------------------------------------------
+| City          | h(n) to Boston  (miles)  |
+|------------------------------------------|
+| Boston        |  0                       |
+| Providence    |  50                      |
+| Portland      |  107                     |      
+| New York      |  215                     |
+| Philadelphia  |  270                     |
+| Baltimore     |  360                     |
+| Syracuse      |  260                     |
+| Buffalo       |  400                     | 
+| Pittsburgh    |  470                     |
+| Cleveland     |  550                     |
+| Columbus      |  640                     |
+| Detroit       |  610                     |
+| Indianapolis  |  780                     |
+| Chicago       |  860                     |
+--------------------------------------------
+
+
+Q2 Consider a maze as a 5x5 matrix input where 0 denotes an empty tile, 1 denotes an
+obstruction/wall, 2 denotes the start state and 3 denotes the reward. Assume valid actions as
+L,R,U,D where L=move_left, R=move_right, U=move_up, D=move_down,. Use the A* algorithm
+on the resultant maze for your agent to reach all the rewards, and keep a record of the tiles
+visited on the way. Consider the rewards as goals. If all goals are completed, then one can
+come out of the maze. Assume heuristic cost and evaluation cost with proper justification.
