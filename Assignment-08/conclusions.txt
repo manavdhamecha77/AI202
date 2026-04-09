@@ -1,0 +1,28 @@
+1. Local Beam Search
+
+| Beam Width | Behavior                                     |
+| ---------- | -------------------------------------------- |
+| k = 3      | Faster but may get stuck in local optimum    |
+| k = 5      | Better exploration                           |
+| k = 10     | Higher chance of optimal solution but slower |
+
+
+Conclusion
+
+- Larger k improves solution quality
+- Convergence depends on k
+- Small k → fast but less accurate
+- Large k → slower but more optimal
+
+
+2. Genetic Algorithm
+
+| Crossover | Behavior                  |
+| --------- | ------------------------- |
+| 1-Point   | Faster but less diversity |
+| 2-Point   | Better diversity          |
+
+Conclusion
+
+- 2-point crossover improves exploration
+- It usually converges faster to better solutions

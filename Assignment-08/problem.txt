@@ -1,0 +1,21 @@
+Use the following graph for the Traveling Salesperson problem.  
+Find the least cost path in the graph for the TSP problem. 
+A B C D E F G H 
+A [0, 10, 15, 20, 25, 30, 35, 40], # City 0 
+B [12, 0, 35, 15, 20, 25, 30, 45], # City 1 
+C [25, 30, 0, 10, 40, 20, 15, 35], # City 2 
+D [18, 25, 12, 0, 15, 30, 20, 10], # City 3 
+E [22, 18, 28, 20, 0, 15, 25, 30], # City 4 
+F [35, 22, 18, 28, 12, 0, 40, 20], # City 5 
+G [30, 35, 22, 18, 28, 32, 0, 15], # City 6 
+H [40, 28, 35, 22, 18, 25, 12, 0 ] # City 7 
+
+1. 
+    Use the local beam search to solve the problem. 
+    Give a comparative analysis of the algorithm when the beam width k=3,5,10. 
+    Does the convergence depend on the value of k? 
+
+2. 
+    Use the genetic algorithm to solve the problem. 
+    Use one crossover point and two crossover points to generate the offspring. 
+    Does the number of crossover points impact the convergence rate?

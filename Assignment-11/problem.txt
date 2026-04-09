@@ -1,0 +1,13 @@
+1. Consider the following districts in the map of Gujarat.
+
+Color this map with the lowest number of colors posing it as a constraint satisfaction
+problem so that no two adjacent districts are colored the same. [Diu is not a district of
+Gujarat and Rann of Kuchchh and Little Rann of Kuchchh are also not districts]
+
+2. Solve the following cryptarithmetic problem posing it as a constraint satisfaction problem.
+Each letter represents a unique digit from 0 to 9. The leading letters (S and M) cannot be
+0. Solve:
+SEND
++ MORE
+_______________
+MONEY
