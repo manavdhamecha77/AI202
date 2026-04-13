@@ -1,64 +1,69 @@
-# SEND + MORE = MONEY
+# Cryptarithmetic Puzzle: SEND + MORE = MONEY
 
-letters = ['S','E','N','D','M','O','R','Y']
-
-
-def is_valid(assign):
-    # All values must be unique
-    if len(set(assign.values())) < len(assign):
-        return False
-
-    # Leading digits cannot be zero
-    if ('S' in assign and assign['S'] == 0) or ('M' in assign and assign['M'] == 0):
-        return False
-
-    # If all assigned, check full equation
-    if len(assign) == 8:
-        S,E,N,D = assign['S'],assign['E'],assign['N'],assign['D']
-        M,O,R,Y = assign['M'],assign['O'],assign['R'],assign['Y']
-
-        SEND  = 1000*S + 100*E + 10*N + D
-        MORE  = 1000*M + 100*O + 10*R + E
-        MONEY = 10000*M + 1000*O + 100*N + 10*E + Y
-
-        return SEND + MORE == MONEY
-
-    return True
+symbols = ['S', 'E', 'N', 'D', 'M', 'O', 'R', 'Y']
 
 
-def backtrack(assign):
-    # If all assigned → solution
-    if len(assign) == 8:
-        return assign
+def find_solution():
+    available_digits = set(range(10))
 
-    # Pick next variable
-    for l in letters:
-        if l not in assign:
-            var = l
-            break
+    M = 1   # Since carry can only be 1
 
-    for digit in range(10):
-        assign[var] = digit
+    for S in range(1, 10):
+        if S == M:
+            continue
 
-        if is_valid(assign):
-            result = backtrack(assign)
-            if result:
-                return result
+        for O in available_digits - {M, S}:
+            for E in available_digits - {M, S, O}:
+                for N in available_digits - {M, S, O, E}:
+                    for D in available_digits - {M, S, O, E, N}:
+                        for R in available_digits - {M, S, O, E, N, D}:
 
-        del assign[var]
+                            Y = (D + E) % 10
+                            carry1 = (D + E) // 10
 
-    return None
+                            used = {M, S, O, E, N, D, R}
+                            if Y in used:
+                                continue
+
+                            if (N + R + carry1) % 10 != E:
+                                continue
+                            carry2 = (N + R + carry1) // 10
+
+                            if (E + O + carry2) % 10 != N:
+                                continue
+                            carry3 = (E + O + carry2) // 10
+
+                            if (S + M + carry3) % 10 != O:
+                                continue
+                            carry4 = (S + M + carry3) // 10
+
+                            if carry4 == M:
+                                return {
+                                    'S': S, 'E': E, 'N': N, 'D': D,
+                                    'M': M, 'O': O, 'R': R, 'Y': Y
+                                }
 
 
-solution = backtrack({})
+answer = find_solution()
 
-print("\nSolution:\n")
-for k in letters:
-    print(k, "→", solution[k])
+print("Solution:\n")
 
-S,E,N,D = solution['S'],solution['E'],solution['N'],solution['D']
-M,O,R,Y = solution['M'],solution['O'],solution['R'],solution['Y']
+for ch in symbols:
+    print(ch, "=", answer[ch])
 
-print("\nSEND =", 1000*S + 100*E + 10*N + D)
-print("MORE =", 1000*M + 100*O + 10*R + E)
-print("MONEY =", 10000*M + 1000*O + 100*N + 10*E + Y)
+S = answer['S']
+E = answer['E']
+N = answer['N']
+D = answer['D']
+M = answer['M']
+O = answer['O']
+R = answer['R']
+Y = answer['Y']
+
+SEND = 1000 * S + 100 * E + 10 * N + D
+MORE = 1000 * M + 100 * O + 10 * R + E
+MONEY = 10000 * M + 1000 * O + 100 * N + 10 * E + Y
+
+print("\nSEND  = ", SEND)
+print("MORE  = ", MORE)
+print("MONEY =", MONEY)

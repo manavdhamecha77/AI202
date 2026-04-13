@@ -120,18 +120,6 @@ print("Cost:",cost)
 
 
 
-abcde
-vwxyz
-
-a|b|cde
-ab|c|de
-abc|d|e
-a|bc|de
-ab|cd|e
-a|bcd|e
-
-
-
 
 
 

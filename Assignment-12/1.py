@@ -9,7 +9,7 @@ from collections import deque
 
 N = 6
 
-graph = [[0]*N for _ in range(N)]
+graph = [[0]*N for i in range(N)]
 
 edges = [
     (0,1),(0,2),(0,5),
