@@ -54,6 +54,7 @@ graph = [[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
         ]
 
+
 def select_unassigned(assignment, domains):
     unassigned = [i for i in range(N) if assignment[i] == -1]
 

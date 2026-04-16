@@ -1,0 +1,179 @@
+CRYPTARITHMETIC PUZZLE
+
+    SEND
+  + MORE
+  -------
+   MONEY
+
+
+LETTERS:
+S, E, N, D, M, O, R, Y
+
+All letters have unique digits.
+Same letter = same digit.
+Leading digits cannot be zero.
+
+
+COLUMN WISE CONSTRAINTS
+
+1) Units Column
+
+D + E = Y + 10*C1
+
+So,
+
+Y = (D + E) mod 10
+C1 = (D + E) // 10
+
+
+2) Tens Column
+
+N + R + C1 = E + 10*C2
+
+So,
+
+E = (N + R + C1) mod 10
+C2 = (N + R + C1) // 10
+
+
+3) Hundreds Column
+
+E + O + C2 = N + 10*C3
+
+So,
+
+N = (E + O + C2) mod 10
+C3 = (E + O + C2) // 10
+
+
+4) Thousands Column
+
+S + M + C3 = O + 10*C4
+
+So,
+
+O = (S + M + C3) mod 10
+C4 = (S + M + C3) // 10
+
+
+5) Ten-Thousands Column
+
+C4 = M
+
+
+DIRECT LOGICAL CONSTRAINTS
+
+1) M = 1
+
+Because two 4-digit numbers added give 5-digit number,
+so leftmost carry must be 1.
+
+
+2) O = 0
+
+From thousands column:
+S + 1 + C3 gives carry 1,
+therefore result digit becomes 0.
+
+
+3) S = 9
+
+To generate carry into fifth digit,
+largest possible leading digit is 9.
+
+
+SOLVING STEP BY STEP
+
+Known:
+
+M = 1
+O = 0
+S = 9
+
+
+Equation:
+
+E + O + C2 = N + 10*C3
+
+Put O = 0
+
+E + C2 = N + 10*C3
+
+
+Try valid values:
+
+E = 5
+C2 = 1
+
+5 + 0 + 1 = 6
+
+So,
+
+N = 6
+C3 = 0
+
+
+
+Thousands Column:
+
+S + M + C3 = O + 10*C4
+
+9 + 1 + 0 = 10
+
+So,
+
+O = 0
+C4 = 1
+
+
+
+Tens Column:
+
+N + R + C1 = E + 10*C2
+
+6 + R + C1 = 5 + 10(1)
+
+6 + R + C1 = 15
+
+Try C1 = 1
+
+6 + R + 1 = 15
+
+R = 8
+
+
+
+Units Column:
+
+D + E = Y + 10*C1
+
+D + 5 = Y + 10(1)
+
+D + 5 = Y + 10
+
+Try D = 7
+
+12 = Y + 10
+
+Y = 2
+
+
+FINAL VALUES
+
+S = 9
+E = 5
+N = 6
+D = 7
+M = 1
+O = 0
+R = 8
+Y = 2
+
+
+VERIFY
+
+SEND  = 9567
+MORE  = 1085
+MONEY = 10652
+
+9567 + 1085 = 10652

@@ -7,7 +7,7 @@ Gujarat and Rann of Kuchchh and Little Rann of Kuchchh are also not districts]
 2. Solve the following cryptarithmetic problem posing it as a constraint satisfaction problem.
 Each letter represents a unique digit from 0 to 9. The leading letters (S and M) cannot be
 0. Solve:
-SEND
+  SEND
 + MORE
 _______________
 MONEY
