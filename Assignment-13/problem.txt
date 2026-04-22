@@ -1,0 +1,27 @@
+Create a class for propositional symbols. For example: If you have a Symbol class for creating any
+propositional symbol, it should be written as:
+p = Symbol('P')
+Define unary and binary logic operations/logical connectives for handling simple propositional logic.
+(Define operations for not, or, and, conditional, and double conditional)
+The inputs to your operations are all the possible values (boolean) of the constituent symbols and the
+outputs are also boolean values. Include another operation for printing a truth table for an operation that
+should mimic a truth table in the propositional logic as shown below:
+
+P   Q   P ∧ Q (P AND Q)
+F   F        F
+F   T        F
+T   F        F
+T   T        T
+
+Using the defined symbols and operations, find the truth values and print the truth tables of the following
+propositions: (write a function to evaluate complex propositions)
+1. ~P->Q
+2. ~P ∧ ~Q
+3. ~P ∨ ~Q
+4. ~P->~Q
+5. ~P <-> ~Q
+6. (P ∨ Q)∧(~P->Q)
+7. ((P ∨ Q)->~R)
+8. (((P ∨ Q)->~R) <-> ((~P∧~Q)->~R))
+9. (((P->Q)∧(Q->R))->(Q->R))
+10. (((P->(Q∨R)) -> (~P∧~Q∧~R)))
